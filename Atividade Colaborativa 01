@@ -1,7 +1,17 @@
 #include<stdio.h>
+
 int main() {
-    float peso; //float = declara a variável com decimal peso
-    char sexo; //char = declara  sexo como uma variável
-    scanf("%c", &unidade);
-    scanf("%f", &peso)
-    printf ("Digite o seu sexo"\n) //pede o sexo do usuário
+    float peso, altura;
+    char sexo;
+    printf("Digite o seu sexo");
+    scanf("%c", &sexo);
+    if(sexo == 'masculino');{
+        printf("Digite sua altura");
+        scanf("%f", &altura, &peso);{
+            peso = (72.7 * altura) - 58;
+            printf("peso");
+        }
+        
+    }
+        
+}
