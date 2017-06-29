@@ -18,6 +18,7 @@ int main(){
         }
     }
     Par(m, x, y);
+
     return 0;
 
 }
@@ -33,11 +34,14 @@ int **matriz(int x, int y){
 }
 
 int Par(int **m, int x, int y){
+
     for(int i=0; i<x; i++){
         for(int j=0; j<y; j++){
-                if(m[i][j]%2==0);
+                if(m[i][j]%2==0){
                 printf("\nPosicao igual a = %d %d\n", i,j);
+                }
         }
-    return 0;
+
     }
+    return 0;
 }
