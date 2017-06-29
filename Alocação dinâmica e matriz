@@ -3,26 +3,24 @@
 #include <time.h>
 
 int **matriz(int x, int y);
+int Par(int **m, int x, int y);
 
 int main(){
     int x, y;
     srand(time(NULL));
-    int linha, coluna;
     scanf("%d %d", &x, &y); //x = linhas, y = coluna
     int **m = matriz(x, y);
     for(int i=0; i<x; i++){
     printf("\n");
         for(int j=0; j<y; j++){
-            m[i][j]=(rand() % 11);;
+            m[i][j]=(rand() % 10);;
             printf("%d ", m[i][j]);
         }
     }
+    Par(m, x, y);
     return 0;
 
 }
-    //matriz[m][n]
-
-    //Alocar atriz
 
 int **matriz(int x, int y){
     int i, j;
@@ -32,4 +30,14 @@ int **matriz(int x, int y){
         m[i]=(int*)malloc(y*sizeof(int)); //Valor direto
     }
     return m; //retorna matriz
+}
+
+int Par(int **m, int x, int y){
+    for(int i=0; i<x; i++){
+        for(int j=0; j<y; j++){
+                if(m[i][j]%2==0);
+                printf("\nPosicao igual a = %d %d\n", i,j);
+        }
+    return 0;
+    }
 }
