@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int **matriz(int x, int y);
+
+int main(){
+    int x, y;
+    srand(time(NULL));
+    int linha, coluna;
+    scanf("%d %d", &x, &y); //x = linhas, y = coluna
+    int **m = matriz(x, y);
+    for(int i=0; i<x; i++){
+    printf("\n");
+        for(int j=0; j<y; j++){
+            m[i][j]=(rand() % 11);;
+            printf("%d ", m[i][j]);
+        }
+    }
+    return 0;
+
+}
+    //matriz[m][n]
+
+    //Alocar atriz
+
+int **matriz(int x, int y){
+    int i, j;
+    int **m = (int**)malloc(x*sizeof(int*)); //Ponteiro de ponteiro
+
+     for(i = 0; i<x; i++){
+        m[i]=(int*)malloc(y*sizeof(int)); //Valor direto
+    }
+    return m; //retorna matriz
+}
